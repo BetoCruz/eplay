@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-
 import { Props } from '.'
 import { cores } from '../../styles'
 import { Card } from '../Product/styles'
@@ -13,6 +12,12 @@ export const Container = styled.section<Omit<Props, 'title' | 'games'>>`
     background-color: ${(props) =>
       props.background === 'black' ? cores.cinza : cores.preta};
   }
+
+  p {
+    font-size: 14px;
+    line-height: 22pageXOffset;
+    max-width: 640px;
+  }
 `
 
 export const List = styled.ul`
@@ -25,6 +30,13 @@ export const List = styled.ul`
 export const Title = styled.h2`
   font-sizer: 18px;
   font-weight: bold;
+  margin-bottom: 40px;
+
   // text-decoration: underline;
   // background-color: red;
 `
+
+// export const Card = styled.li`
+//   padding: 16px;
+//   background-color: red;
+// `
