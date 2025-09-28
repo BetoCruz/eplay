@@ -1,20 +1,16 @@
 import { useState } from 'react'
 
-import hogwarts from '../../assets/images/fundo_hogwarts.png'
-import spiderman from '../../assets/images/banner-homem-aranha.png'
-// import zelda from '../../assets/images/zelda.png'
-import play from '../../assets/images/EPLAY (1)/botao-play 1@2x.png'
-import zoom from '../../assets/images/botao_zoom/mais-zoom 1@2x.png'
-// import close_1 from '../../assets/images/close_1.png'
-import fechar from '../../assets/images/fechar.png'
-
 import Section from '../Section'
+import { GalleryItem } from '../../pages/Home'
+
 import { Items, Item, Action, Modal, ModalContent } from './styles'
 
-interface GalleryItem {
-  type: 'image' | 'video'
-  url: string
-}
+import spiderman from '../../assets/images/banner-homem-aranha.png'
+import hogwarts from '../../assets/images/fundo_hogwarts.png'
+
+import play from '../../assets/images/EPLAY (1)/botao-play 1@2x.png'
+import zoom from '../../assets/images/botao_zoom/mais-zoom 1@2x.png'
+import fechar from '../../assets/images/fechar.png'
 
 const mock: GalleryItem[] = [
   {

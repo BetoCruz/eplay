@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import { Props } from '.'
 import { cores } from '../../styles'
 import { Card } from '../Product/styles'
+import { Props } from '.'
 
 export const Container = styled.section<Omit<Props, 'title' | 'games'>>`
   padding: 32px 0;
