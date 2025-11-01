@@ -1,19 +1,12 @@
 import { Imagem, Preco, Titulo } from './styles'
-import bannerImg from '../../assets/images/banner-homem-aranha.png'
 import Tag from '../Tag'
 import Button from '../Button'
-import { useEffect, useState } from 'react'
-import { Game } from '../../pages/Home'
+// import { useEffect, useState } from 'react'
+// import { Game } from '../../pages/Home'
 import { formataPreco } from '../ProductsList'
-
+import { useGetFeatureGamesQuery } from '../../services/api'
 const Banner = () => {
-  const [game, setGame] = useState<Game>()
-
-  useEffect(() => {
-    fetch('https://ebac-fake-api.vercel.app/api/eplay/destaque')
-      .then((res) => res.json())
-      .then((res) => setGame(res))
-  }, [])
+  const { data: game, isLoading } = useGetFeatureGamesQuery()
 
   if (!game) {
     return <h3>Carregando...</h3>
