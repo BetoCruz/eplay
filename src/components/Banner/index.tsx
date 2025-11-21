@@ -1,12 +1,10 @@
 import { Imagem, Preco, Titulo } from './styles'
 import Tag from '../Tag'
 import Button from '../Button'
-// import { useEffect, useState } from 'react'
-// import { Game } from '../../pages/Home'
 import { formataPreco } from '../ProductsList'
 import { useGetFeatureGamesQuery } from '../../services/api'
 const Banner = () => {
-  const { data: game, isLoading } = useGetFeatureGamesQuery()
+  const { data: game } = useGetFeatureGamesQuery()
 
   if (!game) {
     return <h3>Carregando...</h3>
@@ -24,6 +22,7 @@ const Banner = () => {
           </Preco>
         </div>
         <Button
+          variant="primary"
           type="link"
           to={`/product/${game.id}`}
           title="Clique a aqui para aproveitar a oferta "

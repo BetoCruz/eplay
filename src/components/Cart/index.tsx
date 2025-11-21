@@ -1,23 +1,50 @@
-import { Overlay, CartContainer } from './styles'
+import Button from '../Button'
+import starWars from '../../assets/images/star_wars.png'
+import {
+  Overlay,
+  CartContainer,
+  SideBar,
+  Prices,
+  Quantity,
+  CartItem
+} from './styles'
+import Tag from '../Tag'
 
 const Cart = () => {
   return (
     <CartContainer>
       <Overlay />
-      <aside>
+      <SideBar>
         <ul>
-          <li>
-            <h3>Nome do jogo</h3>
-          </li>
+          <CartItem>
+            <img src={starWars} />
+            <div>
+              <h3>Nome do jogo</h3>
+              <Tag>RPG</Tag>
+              <Tag>PS5</Tag>
+              <span>R$ 150,00</span>
+            </div>
+            <button type="button">X</button>
+          </CartItem>
+          <CartItem>
+            <img src={starWars} />
+            <div>
+              <h3>Nome do jogo</h3>
+              <Tag>RPG</Tag>
+              <Tag>PS5</Tag>
+              <span>R$ 150,00</span>
+            </div>
+            <button type="button">X</button>
+          </CartItem>
         </ul>
-        <p>2 jogo(s) no carrinho</p>
-        <p>
+        <Quantity>2 jogo(s) no carrinho</Quantity>
+        <Prices>
           Total de R$ 250, 00 <span>Em até 6x sem juros</span>
-        </p>
-        <button title="Clique aqui para continuar a compra" type="button">
+        </Prices>
+        <Button title="Clique aqui para continuar a compra" type="button">
           Continuar com a compra
-        </button>
-      </aside>
+        </Button>
+      </SideBar>
     </CartContainer>
   )
 }

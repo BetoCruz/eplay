@@ -50,7 +50,7 @@ export const Infos = styled.div`
 
   p {
     font-size: 18px;
-    margin: 16px;
+    margin: 16px 0;
 
     span {
       display: block;
