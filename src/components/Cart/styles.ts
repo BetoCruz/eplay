@@ -19,9 +19,14 @@ export const CartContainer = styled.aside`
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
+  // display: flex;
+  display: none;
   justify-content: flex-end;
   z-index: 1;
+
+  &.is-open {
+    display: flex;
+  }
 `
 export const SideBar = styled.aside`
   background-color: ${cores.cinza};
@@ -56,12 +61,10 @@ export const Quantity = styled.p`
 `
 
 export const CartItem = styled.li`
+  position: relative;
   display: flex;
   border-bottom: 1px solid ${cores.cinzaClaro};
-  // padding-bottom: 8px;
-  // padding-top: 8px;
   padding: 8px 0;
-  position: relative;
 
   img {
     height: 80px;
